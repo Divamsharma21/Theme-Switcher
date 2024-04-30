@@ -1,13 +1,13 @@
 import { ThemeProvider } from "./context/Theme";
-import Cards from "./components/Cards";
-import ThemeBtn from "./components/ThemeBtn";
 
-import { useEffect, useState } from 'react'
+import Cards from "./components/Cards.jsx";
+import ThemeBtn from "./components/ThemeBtn.jsx";
+
+import { useEffect, useState } from "react";
 import "./App.css";
 
-const [themeMode, setThemeMode] = useState("light");
-
 function App() {
+  const [themeMode, setThemeMode] = useState("light");
 
   const lightTheme = () => {
     setThemeMode("light");
@@ -32,13 +32,11 @@ function App() {
       <div className="flex flex-wrap min-h-screen items-center">
         <div className="w-full">
           <div className="w-full max-w-sm mx-auto flex justify-end mb-4">
-            {/* theme button */}
             <ThemeBtn />
           </div>
 
           <div className="w-full max-w-sm mx-auto">
-            {/*  cards*/}
-            <Cards />
+            <Cards/>
           </div>
         </div>
       </div>
